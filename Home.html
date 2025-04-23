@@ -137,6 +137,34 @@
       }
     }
   </style>
+
+<!-- Firebase SDKs + Ticker Auto-Fetch -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+  import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY_HERE",
+    authDomain: "netwatch2025.firebaseapp.com",
+    projectId: "netwatch2025",
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  async function loadTicker() {
+    const docRef = doc(db, "siteConfig", "ticker");
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      const tickerText = docSnap.data().message;
+      const tickerDiv = document.querySelector("#info-scroll > div");
+      if (tickerDiv) tickerDiv.innerText = tickerText;
+    }
+  }
+
+  loadTicker();
+</script>
+
 </head>
 <body>
 
