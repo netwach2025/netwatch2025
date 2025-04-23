@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,51 +6,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NetWatch 2025 – News & Testimonies</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
-<style>
-  body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: #f7f9fb;
-    color: #1c2b33;
-  }
-  header {
-    background: linear-gradient(135deg, #1e4d6b, #15374d);
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  header img {
-    max-width: 150px;
-    margin-bottom: 10px;
-  }
-  nav {
-    background: #122c3f;
-    text-align: center;
-    padding: 12px;
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 16px;
-    font-weight: bold;
-    font-size: 1em;
-  }
-  #clock-container {
-    background: #122c3f;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-  }
-</style>
-
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f7f9fb;
+      color: #1c2b33;
+    }
+    header {
+      background: linear-gradient(135deg, #1e4d6b, #15374d);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+    nav {
+      background: #122c3f;
+      text-align: center;
+      padding: 12px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 16px;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    #clock-container {
+      background: #122c3f;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    h2 {
+      color: #1e4d6b;
+      padding-top: 30px;
+    }
+    .article {
+      border-top: 1px solid #ddd;
+      padding: 25px 0;
+    }
+  </style>
 </head>
 <body>
 
 <div id="clock-container">
-  <span id="clock-time">Loading time...</span> | 🕒 Last updated: April 23, 2025 – 02:34 AM
+  <span id="clock-time">Loading time...</span> | 🕒 Last updated: [placeholder] | 📅 Next update: [placeholder]
 </div>
 <script>
   function updateClock() {
@@ -69,48 +84,47 @@
   <h1>NetWatch 2025</h1>
   <p>Latest News, Testimonies & Policy Watch from the Frontlines of U.S. Reform</p>
 </header>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="#news">News Feed</a>
   <a href="#testimony">Testimonies</a>
+  <a href="#executive-actions">Executive Updates</a>
 </nav>
 
-<section class="section" id="news" style="max-width: 900px; margin: 40px auto; padding: 0 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-  <h2 style="color:#1e4d6b; padding-top: 30px;">Latest News & Updates</h2>
-  <div class="article" style="border-top: 1px solid #ddd; padding: 25px 0;">
-    <h3 style="color:#1e4d6b;">House Budget Committee Proposes New SNAP Restrictions</h3>
+<section id="news">
+  <h2>Latest News & Updates</h2>
+  <div class="article">
+    <h3>House Budget Committee Proposes New SNAP Restrictions</h3>
     <p><strong>April 18, 2025</strong> — A new proposal includes work-hour tracking requirements for food stamp recipients nationwide. Critics warn it could disqualify up to 2 million adults without children.</p>
     <p><a href="https://www.congress.gov/bill/118th-congress/house-bill/1268" target="_blank">Read bill summary on Congress.gov</a></p>
   </div>
-  <div class="article" style="border-top: 1px solid #ddd; padding: 25px 0;">
-    <h3 style="color:#1e4d6b;">HUD Budget Forecast Predicts Section 8 Cuts in 2026</h3>
+  <div class="article">
+    <h3>HUD Budget Forecast Predicts Section 8 Cuts in 2026</h3>
     <p><strong>April 12, 2025</strong> — The Legislative Analyst’s Office (LAO) warns that flat funding trends will likely force reductions to new vouchers and emergency housing support.</p>
     <p><a href="https://lao.ca.gov" target="_blank">Visit LAO for report</a></p>
   </div>
 </section>
 
-<section class="section" id="testimony" style="max-width: 900px; margin: 40px auto; padding: 0 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-  <h2 style="color:#1e4d6b;">Real Voices – Share Your Story</h2>
+<section id="testimony">
+  <h2>Real Voices – Share Your Story</h2>
   <p>We collect stories from people impacted by policy changes. Your voice matters — even if you want to remain anonymous.</p>
-
-  <!-- AUTO-INSERTED TESTIMONIES GO HERE -->
   <div id="auto-testimonies">
-    <div style="background-color: #fff4f4; border-left: 5px solid #cc0000; padding: 20px; margin: 20px 0; font-style: italic; border-radius: 6px;">
-      “I’ve been waiting since 2021 for housing. I’ve done everything right. If they cut HUD, it’s over.” — Anonymous, St. Louis
-    </div>
-    <div style="background-color: #fff4f4; border-left: 5px solid #cc0000; padding: 20px; margin: 20px 0; font-style: italic; border-radius: 6px;">
-      “We rely on Medi-Cal for my daughter’s insulin. If California loses federal support, we’ll go into debt just to survive.” — Single parent, Fresno
-    </div>
+    <!-- Testimonies will be auto-inserted here -->
   </div>
-
   <h3>Submit Your Story</h3>
   <p>Use the form below (or email us directly). We will never share your name without permission.</p>
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdBAO7jZzaCi4xnIuZagIQ4--bT9LOyHWfvYPHSzt6Po3MzTQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   <p><strong>Don’t use your real name unless you want to be identified.</strong> Submissions may be edited for clarity.</p>
 </section>
 
+<section id="executive-actions">
+  <h2>Executive Orders & White House Updates</h2>
+  <!-- White House content will be auto-injected here -->
+</section>
+
 <footer style="margin-top: 60px; padding: 20px; text-align: center; background: #1e4d6b; color: #ccc; font-size: 13px;">
   &copy; 2025 NetWatch 2025 | Community-driven news & reporting | netwatch2025@proton.me
 </footer>
+
 </body>
-</html>
