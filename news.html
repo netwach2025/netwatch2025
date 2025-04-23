@@ -1,74 +1,100 @@
-# Save updated `news.html` content with a minor edit to force a GitHub redeploy
-news_html_updated = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NetWatch 2025 – News & Testimonies</title>
-  <!-- Redeploy trigger -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
-      color: #1a1a1a;
+      font-family: 'Roboto', sans-serif;
+      background: #f7f9fb;
+      color: #1c2b33;
     }
+
     header {
-      background-color: #1e4d6b;
+      background: linear-gradient(135deg, #1e4d6b, #15374d);
       color: white;
-      padding: 30px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
+
+    header img {
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+
     nav {
-      background-color: #15374d;
-      padding: 10px;
+      background: #122c3f;
       text-align: center;
+      padding: 12px;
     }
+
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      margin: 0 12px;
+      margin: 0 16px;
       font-weight: bold;
+      font-size: 1em;
     }
-    section {
+
+    .section {
       max-width: 900px;
-      margin: 30px auto;
+      margin: 40px auto;
       padding: 0 20px;
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
     }
+
     h2 {
       color: #1e4d6b;
-      padding-top: 20px;
+      padding-top: 30px;
     }
+
     .article {
       border-top: 1px solid #ddd;
-      padding: 20px 0;
+      padding: 25px 0;
     }
+
+    .article h3 {
+      color: #1e4d6b;
+    }
+
     .testimony-block {
       background-color: #fff4f4;
-      border-left: 4px solid #cc0000;
-      padding: 15px;
+      border-left: 5px solid #cc0000;
+      padding: 20px;
       margin: 20px 0;
       font-style: italic;
+      border-radius: 6px;
     }
+
+    iframe {
+      margin-top: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
     footer {
-      text-align: center;
+      margin-top: 60px;
       padding: 20px;
-      font-size: 13px;
+      text-align: center;
+      background: #1e4d6b;
       color: #ccc;
-      background-color: #1e4d6b;
+      font-size: 13px;
     }
+
     a { color: #1e4d6b; }
   </style>
 </head>
 <body>
 
 <header>
+  <img src="logo-netwatch2025.png" alt="NetWatch 2025 Logo" />
   <h1>NetWatch 2025</h1>
-  <p>Latest News, Analysis & Testimonies from the Frontlines of Policy Change</p>
+  <p>Latest News, Testimonies & Policy Watch from the Frontlines of U.S. Reform</p>
 </header>
 
 <nav>
@@ -77,7 +103,7 @@ news_html_updated = """
   <a href="#testimony">Testimonies</a>
 </nav>
 
-<section id="news">
+<section class="section" id="news">
   <h2>Latest News & Updates</h2>
 
   <div class="article">
@@ -91,10 +117,9 @@ news_html_updated = """
     <p><strong>April 12, 2025</strong> — The Legislative Analyst’s Office (LAO) warns that flat funding trends will likely force reductions to new vouchers and emergency housing support.</p>
     <p><a href="https://lao.ca.gov" target="_blank">Visit LAO for report</a></p>
   </div>
-
 </section>
 
-<section id="testimony">
+<section class="section" id="testimony">
   <h2>Real Voices – Share Your Story</h2>
   <p>We collect stories from people impacted by policy changes. Your voice matters — even if you want to remain anonymous.</p>
 
@@ -120,11 +145,3 @@ news_html_updated = """
 
 </body>
 </html>
-"""
-
-# Save it to a file
-output_path = "/mnt/data/news_redeploy.html"
-with open(output_path, "w", encoding="utf-8") as f:
-    f.write(news_html_updated)
-
-output_path
