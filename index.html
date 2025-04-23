@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetWatch 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0b2b48;
+      color: white;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+    }
+    .logo img {
+      height: 50px;
+    }
+    .logo-text {
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+    .logo-text span {
+      color: #e53935;
+    }
+    .clock {
+      text-align: right;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+    .tracker {
+      background: white;
+      color: black;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      padding: 1em;
+      width: 360px;
+      margin: 0 auto 1em;
+    }
+    .tracker img {
+      width: 80px;
+      border-radius: 6px;
+    }
+    .main-title {
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: 700;
+      margin-top: 0.5em;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1em;
+      padding: 0.2em 2em 1.5em;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 1em;
+    }
+    .watching-section {
+      text-align: center;
+    }
+    .watching-section h2 {
+      font-size: 1.4em;
+      margin-bottom: 1em;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+      padding: 0 1em 2em;
+    }
+    .card {
+      background: white;
+      color: black;
+      border-radius: 10px;
+      width: 230px;
+      padding: 1em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    .card h3 {
+      font-size: 1em;
+      margin: 0.2em 0 0.5em;
+    }
+    .card p {
+      font-size: 0.9em;
+      margin: 0;
+    }
+    #clock-container {
+      background: #081f33;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8em;
+      padding: 1em;
+      background-color: #081f33;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-text" style="font-size: 1.8em; font-weight: 700; color: white; margin-left: 1em;">NETWATCH <span style="color:#e53935;">2025</span></div>
+  </div>
+
+  <div id="clock-container">
+    <span id="clock-time">Loading time...</span> | 🕒 Last updated: [placeholder] | 📅 Next update: [placeholder]
+  </div>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const options = {
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        weekday: 'short', year: 'numeric', month: 'short', day: 'numeric'
+      };
+      document.getElementById('clock-time').textContent = now.toLocaleString('en-US', options);
+    }
+    setInterval(updateClock, 1000);
+    window.onload = updateClock;
+  </script>
+
+  <div class="tracker">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="US Flag">
+    <div>
+      <strong>Presidential Term Tracker</strong><br />
+      President: Donald J. Trump<br />
+      Vice President: J.D. Vance<br />
+      Term: January 20, 2029 – January 15, 2033
+    </div>
+  </div>
+
+  <div class="main-title">NetWatch 2025</div>
+  <div class="subtitle">A data-driven project to track threats to health safety nets – because it belongs to everyone.</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News & Testimonies</a>
+    <a href="#">White House Viewer</a>
+  </nav>
+
+  <div class="watching-section">
+    <h2>What We’re Watching</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🟡 Social Security</h3>
+        <p>Proposals to privatize or implement adjustments</p>
+      </div>
+      <div class="card">
+        <h3>🔵 Medi-Cal</h3>
+        <p>Reductions to funding that covers low-income care</p>
+      </div>
+      <div class="card">
+        <h3>🟠 Housing</h3>
+        <p>Funding for Section 8 housing or other voucher programs</p>
+      </div>
+      <div class="card">
+        <h3>⚫ SNAP / EBT</h3>
+        <p>Extending work requirements or cutting eligibility</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 NetWatch 2025. Community-driven news & reporting. Contact: netwatch2025@proton.me
+  </footer>
+</body>
+</html>
