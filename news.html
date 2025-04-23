@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetWatch 2025 – News & Testimonies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0b2b48;
+      color: white;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+    }
+    .logo-text {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: white;
+    }
+    .logo-text span {
+      color: #e53935;
+    }
+    #clock-container {
+      background: #081f33;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .tracker {
+      background: white;
+      color: black;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      padding: 1em;
+      width: 360px;
+      margin: 1em auto;
+    }
+    .tracker img {
+      width: 80px;
+      border-radius: 6px;
+    }
+    .main-title {
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: 700;
+      margin-top: 0.5em;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1em;
+      padding: 0.2em 2em 1.5em;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 1em;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      color: black;
+      border-radius: 10px;
+      padding: 2em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #0b2b48;
+    }
+    .article {
+      border-top: 1px solid #ccc;
+      padding: 25px 0;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8em;
+      padding: 1em;
+      background-color: #081f33;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo-text">NETWATCH <span>2025</span></div>
+</div>
+
+<div id="clock-container">
+  <span id="clock-time">Loading time...</span> | 🕒 Last updated: [placeholder] | 📅 Next update: [placeholder]
+</div>
+<script>
+  function updateClock() {
+    const now = new Date();
+    const options = {
+      hour: '2-digit', minute: '2-digit', second: '2-digit',
+      weekday: 'short', year: 'numeric', month: 'short', day: 'numeric'
+    };
+    document.getElementById('clock-time').textContent = now.toLocaleString('en-US', options);
+  }
+  setInterval(updateClock, 1000);
+  window.onload = updateClock;
+</script>
+
+<div class="tracker">
+  <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="US Flag">
+  <div>
+    <strong>Presidential Term Tracker</strong><br />
+    President: Donald J. Trump<br />
+    Vice President: J.D. Vance<br />
+    Term: January 20, 2029 – January 15, 2033
+  </div>
+</div>
+
+<div class="main-title">News & Testimonies</div>
+<div class="subtitle">Reporting from the frontlines of policy changes and real voices affected by reform</div>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="#">News Feed</a>
+  <a href="#">Testimonies</a>
+  <a href="#">Executive Updates</a>
+</nav>
+
+<section id="news">
+  <h2>Latest News & Updates</h2>
+  <div class="article">
+    <h3>House Budget Committee Proposes New SNAP Restrictions</h3>
+    <p><strong>April 18, 2025</strong> — A new proposal includes work-hour tracking requirements for food stamp recipients nationwide. Critics warn it could disqualify up to 2 million adults without children.</p>
+    <p><a href="https://www.congress.gov/bill/118th-congress/house-bill/1268" target="_blank">Read bill summary on Congress.gov</a></p>
+  </div>
+  <div class="article">
+    <h3>HUD Budget Forecast Predicts Section 8 Cuts in 2026</h3>
+    <p><strong>April 12, 2025</strong> — The Legislative Analyst’s Office (LAO) warns that flat funding trends will likely force reductions to new vouchers and emergency housing support.</p>
+    <p><a href="https://lao.ca.gov" target="_blank">Visit LAO for report</a></p>
+  </div>
+</section>
+
+<section id="testimony">
+  <h2>Real Voices – Share Your Story</h2>
+  <p>We collect stories from people impacted by policy changes. Your voice matters — even if you want to remain anonymous.</p>
+  <div id="auto-testimonies">
+    <!-- Testimonies will be auto-inserted here -->
+  </div>
+  <h3>Submit Your Story</h3>
+  <p>
+    We no longer use an online form. To share your story, please email us directly at:
+    <br><br>
+    <strong style="font-size: 1.2em;">📬 netwatch2025@proton.me</strong>
+  </p>
+  <p>
+    Tell us your story in great detail. Include what happened, how it impacted you, and anything you want the world to know.
+  </p>
+  <p><strong>We will never share your name without permission.</strong></p>
+</section>
+
+<section id="executive-actions">
+  <h2>Executive Orders & White House Updates</h2>
+  <!-- White House content will be auto-injected here -->
+</section>
+
+<footer>
+  &copy; 2025 NetWatch 2025. Community-driven news & reporting. Contact: netwatch2025@proton.me
+</footer>
+</body>
+</html>
