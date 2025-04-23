@@ -138,33 +138,32 @@
     }
   </style>
 
-<!-- Firebase SDKs + Ticker Auto-Fetch -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-  import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+  <!-- Firebase SDKs + Ticker Auto-Fetch -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY_HERE",
-    authDomain: "netwatch2025.firebaseapp.com",
-    projectId: "netwatch2025",
-  };
+    const firebaseConfig = {
+      apiKey: "AIzaSyD2RaCn7tUkjbJzN6NAWmbU6SCxJdJhAI",
+      authDomain: "netwatch2025.firebaseapp.com",
+      projectId: "netwatch2025",
+    };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
 
-  async function loadTicker() {
-    const docRef = doc(db, "siteConfig", "ticker");
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      const tickerText = docSnap.data().message;
-      const tickerDiv = document.querySelector("#info-scroll > div");
-      if (tickerDiv) tickerDiv.innerText = tickerText;
+    async function loadTicker() {
+      const docRef = doc(db, "siteConfig", "ticker");
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        const tickerText = docSnap.data().message;
+        const tickerDiv = document.querySelector("#info-scroll > div");
+        if (tickerDiv) tickerDiv.innerText = tickerText;
+      }
     }
-  }
 
-  loadTicker();
-</script>
-
+    loadTicker();
+  </script>
 </head>
 <body>
 
@@ -241,13 +240,11 @@
 <div class="main-title">NetWatch 2025</div>
 <div class="subtitle">A data-driven project to track threats to health safety nets – because it belongs to everyone.</div>
 
-
 <nav>
   <a href="Home.html">Home</a>
   <a href="news.html">News & Testimonies</a>
   <a href="#">White House Viewer</a>
 </nav>
-
 
 <div class="watching-section">
   <h2>What We’re Watching</h2>
@@ -274,5 +271,6 @@
 <footer>
   © 2025 NetWatch 2025. Community-driven news & reporting. Contact: netwatch2025@proton.me
 </footer>
+
 </body>
 </html>
