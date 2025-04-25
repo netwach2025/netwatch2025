@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetWatch 2025 Bootloader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    body { margin:0; background:black; overflow:hidden; font-family:'Orbitron',sans-serif; color:#00ffcc; }
+    #bootloader { position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    #bootloader img { width:240px; margin-bottom:20px; border-radius:12px; box-shadow:0 0 40px #00ffcc; }
+    #bootloader h1 { font-size:2em; animation:glow 1.5s infinite alternate; letter-spacing:3px; }
+    @keyframes glow { from { text-shadow:0 0 10px #00ffcc,0 0 20px #00ffff; } to { text-shadow:0 0 20px #00ffcc,0 0 30px #00ffff; } }
+  </style>
+</head>
+<body>
+  <div id="bootloader">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Dyson_Sphere_3D_Animation_by_Robbie_Conceptuel.gif" alt="Boot Animation" />
+    <h1>NETWATCH 2025</h1>
+  </div>
+  <script>
+    setTimeout(() => { window.location.href = 'Home.html'; }, 5000);
+  </script>
+</body>
+</html>
